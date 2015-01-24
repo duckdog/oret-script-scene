@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: fa738f9d45ff1f5489b1d1283392fd6a
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - buttonTexture: {instanceID: 0}
+  - designdate: {instanceID: 0}
+  - prefab: {instanceID: 0}
+  - clone: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
