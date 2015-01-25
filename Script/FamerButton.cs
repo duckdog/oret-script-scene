@@ -34,18 +34,31 @@ public class FamerButton : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		void choosed();
 	}
 	//
 	public void choosing_tikara  (){ choose_tikara     = true;}
 	public void choosing_tisei   (){ choose_tisei      = true;}
 	public void choosing_oretrice(){ choose_oretrice   = true;}
 
+	//make crops
+	public void pleasecultivationButton(){
+		Famer_DocultivaitionPanel.SetActive (true);
+	}
+	// close panel
+	public void F_mataneButton(){
+		Famer_DocultivaitionPanel.SetActive(false);
+		Famer_DidcultivationPanel.SetActive (false);
+		Famer_cultivationPanel.SetActive (false);
+		PlayerUI.Stop = false;
+	}
+
 	//choosed after system
 	public void choosed(){
 		if(choose_tikara || choose_tisei ||
 		   choose_oretrice                ){
 			Famer_finshcultivation = true;
+
 		}
 	}
 	// if closed resultpanel,riset bool choose; 
