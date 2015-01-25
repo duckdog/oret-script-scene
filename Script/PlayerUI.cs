@@ -24,7 +24,8 @@ public class PlayerUI : MonoBehaviour {
 	public static bool Stop  = false;
 	public static float lifespeed;
 	public static float life = 0.0f;
-
+	public static bool  timeover_fadeout;
+	GameObject          timeover_text;
 
 	//don't move position 
 	public void StopPosition(){
@@ -51,6 +52,7 @@ public class PlayerUI : MonoBehaviour {
 		BirdResltPanel  = GameObject.Find ("ResultPanel")      as GameObject;
 		BirdText        = GameObject.Find ("birdText")         as GameObject;
 		SailorText_Gage = GameObject.Find ("SailorText")       as GameObject;
+		timeover_text  = GameObject.Find ("timeover_fadeoutText")   as GameObject;
 	
 
 
@@ -63,6 +65,7 @@ public class PlayerUI : MonoBehaviour {
 		if (TextData.playafter && !TextData.Birdresult_opend)
 			BirdResltPanel.SetActive  (true);
 		SailorText_Gage.SetActive (false);
+		timeover_text.SetActive (false);
 
 	}
 
@@ -78,7 +81,10 @@ public class PlayerUI : MonoBehaviour {
 	public void lifemater(){
 		slider.value -= lifespeed * Time.deltaTime;
 		life += lifespeed * Time.deltaTime;
-		if(slider.value == 0.0f)  Debug.Log ("FINISH");
+		if(slider.value == 0.0f) {
+			timeover_fadeout = true;
+			timeover_text.SetActive(true);
+		}
 	}
 	//Pilot close to resultPanel
 	public void Closeresult(){
