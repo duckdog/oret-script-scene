@@ -56,7 +56,7 @@ public class PlayerUI : MonoBehaviour {
 		SailorText_Gage = GameObject.Find ("SailorText")       as GameObject;
 		timeover_text   = GameObject.Find ("timeover_fadeoutText")   as GameObject;
 		FamerText       = GameObject.Find ("FamerText") as GameObject;
-	
+
 
 
  		MessegePanel.SetActive (false);

@@ -18,7 +18,7 @@ public class FamerButton : MonoBehaviour {
 		//test 
 		Famer_finshcultivation = false;
 
-		Famer_cultivationPanel    = GameObject.Find("F_cultivationPanel") as GameObject;
+		Famer_cultivationPanel    = GameObject.Find("cultivationPanel") as GameObject;
 		Famer_DocultivaitionPanel = GameObject.Find("F_do")               as GameObject;
 		Famer_DidcultivationPanel = GameObject.Find("F_did")              as GameObject;
 	
