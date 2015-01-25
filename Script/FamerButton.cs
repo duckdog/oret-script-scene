@@ -7,21 +7,34 @@ public class FamerButton : MonoBehaviour {
 	public static bool choose_tisei;
 	public static bool choose_oretrice;
 	//jading do or did   
-	public static bool Famer_finshcultivation;
+	public static bool Famer_finshcultivation = false;
 
 	//famer
-	GameObject Famer_DocultivaitionPanel;
-	GameObject Famer_DidculitvationPanel;
+	GameObject Famer_cultivationPanel    = null;
+	GameObject Famer_DocultivaitionPanel = null;
+	GameObject Famer_DidcultivationPanel = null;
 	// Use this for initialization
 	void Start () {
 		//test 
 		Famer_finshcultivation = false;
 
+		Famer_cultivationPanel    = GameObject.Find("F_cultivationPanel") as GameObject;
+		Famer_DocultivaitionPanel = GameObject.Find("F_do")               as GameObject;
+		Famer_DidcultivationPanel = GameObject.Find("F_did")              as GameObject;
+	
+		Famer_cultivationPanel.SetActive (false);
+		Famer_DocultivaitionPanel.SetActive (false);
+		if(Famer_finshcultivation)
+		Famer_DidcultivationPanel.SetActive (false);
+		else
+		Famer_DidcultivationPanel.SetActive(true);
+
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 	//
 	public void choosing_tikara  (){ choose_tikara     = true;}

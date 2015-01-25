@@ -16,8 +16,9 @@ public class PlayerUI : MonoBehaviour {
 	//sailor
 	GameObject  SailorText_Gage = null;
 	public static bool playafter_sailor;
-
-
+	//Famer
+	GameObject FamerText       = null;
+	public static bool playafter_famer;
 
 	// states HP(timer),stopmove,etc... 
 	public Slider slider     = null;
@@ -35,6 +36,7 @@ public class PlayerUI : MonoBehaviour {
 		SyojiPanel.SetActive  (false);
 		TalkPanel.SetActive   (false);
 		SailorText_Gage.SetActive (false);
+		FamerText.SetActive (false);
 	}
 
 	public void OpenSyojiPanel(){
@@ -52,7 +54,8 @@ public class PlayerUI : MonoBehaviour {
 		BirdResltPanel  = GameObject.Find ("ResultPanel")      as GameObject;
 		BirdText        = GameObject.Find ("birdText")         as GameObject;
 		SailorText_Gage = GameObject.Find ("SailorText")       as GameObject;
-		timeover_text  = GameObject.Find ("timeover_fadeoutText")   as GameObject;
+		timeover_text   = GameObject.Find ("timeover_fadeoutText")   as GameObject;
+		FamerText       = GameObject.Find ("FamerText") as GameObject;
 	
 
 
@@ -66,6 +69,7 @@ public class PlayerUI : MonoBehaviour {
 			BirdResltPanel.SetActive  (true);
 		SailorText_Gage.SetActive (false);
 		timeover_text.SetActive (false);
+		FamerText.SetActive (false);
 
 	}
 
@@ -142,6 +146,7 @@ public class PlayerUI : MonoBehaviour {
 				
 				FoundPanel.SetActive(false);
 				TalkPanel.SetActive (true);
+				FamerText.SetActive(true);
 				Stop = true;
 			}		
 		}
