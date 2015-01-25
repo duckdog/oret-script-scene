@@ -22,6 +22,7 @@ public class Savetest : MonoBehaviour {
 	public static int money;
 
 	public static int[] clone_amount = new int[10];
+	public static int day;
 
 
 
@@ -43,6 +44,7 @@ public class Savetest : MonoBehaviour {
 		feromon        = PlayerPrefs.GetInt("feromon");
 		hosi           = PlayerPrefs.GetInt("hosi");
 		money          = PlayerPrefs.GetInt("money");
+		day            = PlayerPrefs.GetInt("day");
 
 		for (int i = 0; i < 10; i++) {
 			clone_amount[i] = PlayerPrefs.GetInt("clone" + i.ToString());	
@@ -63,6 +65,7 @@ public class Savetest : MonoBehaviour {
 		PlayerPrefs.DeleteKey("feromon");
 		PlayerPrefs.DeleteKey("hosi");
 		PlayerPrefs.DeleteKey("money");
+		PlayerPrefs.DeleteKey("day");
 
 		for (int i = 0; i < 10; i++) {
 		PlayerPrefs.DeleteKey("clone" + i.ToString());	
@@ -102,6 +105,7 @@ public class Savetest : MonoBehaviour {
 		PlayerPrefs.SetInt("kaminoke", kaminoke);//Save.
 		PlayerPrefs.SetInt("kajitu", kajitu);
 		PlayerPrefs.SetInt ("money", money);
+		PlayerPrefs.SetInt ("day", day);
 
 		for (int i = 0; i < 10; i++) {
 			PlayerPrefs.SetInt("clone" + i.ToString(),clone_amount[i]);	
