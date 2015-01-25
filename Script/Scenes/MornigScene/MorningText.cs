@@ -57,14 +57,14 @@ public class MorningText : MonoBehaviour {
 		paytext[2].text += totalnumber.ToString () + "ｶｽﾔ\n";
 
 	}	
-
+	// cahege to get ItemPanel
 	public void NextButton(){
 		count++;
 		paytextpanel.SetActive (false);
 		gettextpanel.SetActive (true);
 		if (count == 2) {
 			count = 0;
-			Application.LoadLevel("MakeClone");
+			Application.LoadLevel("Start_Scene");
 		}
 	}
 	public void GetItem(){
