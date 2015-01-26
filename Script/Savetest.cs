@@ -22,6 +22,7 @@ public class Savetest : MonoBehaviour {
 	public static int money;
 
 	public static int[] clone_amount = new int[10];
+	public static int Famer_requestday;
 	public static int day;
 
 
@@ -44,6 +45,7 @@ public class Savetest : MonoBehaviour {
 		feromon        = PlayerPrefs.GetInt("feromon");
 		hosi           = PlayerPrefs.GetInt("hosi");
 		money          = PlayerPrefs.GetInt("money");
+		day            = PlayerPrefs.GetInt("day");
 		day            = PlayerPrefs.GetInt("day");
 
 		for (int i = 0; i < 10; i++) {

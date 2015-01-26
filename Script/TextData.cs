@@ -22,6 +22,7 @@ public class TextData : MonoBehaviour {
 	public Text[] bird_text = new Text[2];
 	//famer
 	public Text   famerresult;
+	public static bool F_showresult;
 	// Use this for initialization
 	void Start () {
 		amount = 0;
@@ -210,7 +211,24 @@ public class TextData : MonoBehaviour {
 
 	//famar cultivation result text.
 	public void Famer_TextUpDate(){
-		//famerresult.text 
+		if(F_showresult){
+		int rand = Random.Range (3, 5);
+		if(FamerButton.choose_tikara){
+			famerresult.text = " 力の種が "+rand.ToString()+"個";
+		    Savetest.tikaranotane += rand;
+		}
+		else if(FamerButton.choose_tisei){
+			famerresult.text = " 知性の種が " + rand.ToString() + "個";
+			Savetest.tikaranotane += rand;
+		}
+		else{
+			int prass  = Savetest.clone_amount[1];
+			famerresult.text = "オレット米が " + 
+								(100 + (prass * 10)).ToString() +"ｇ";
+			Savetest.money += 100 + prass; 
+		}
+			F_showresult = false;
+		}
 	}
 
 
