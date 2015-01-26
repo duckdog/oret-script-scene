@@ -23,6 +23,11 @@ public class PlayerUI : MonoBehaviour {
 	GameObject Famer_DocultivaitionPanel = null; 
 	GameObject Famer_DidcultivationPanel = null;
 	public static bool playafter_famer;
+	TextData textData;
+
+	// Gameobject textdate Function call 
+	//GameObject textdataFunction;
+
 
 	// states HP(timer),stopmove,etc... 
 	public Slider slider     = null;
@@ -37,6 +42,9 @@ public class PlayerUI : MonoBehaviour {
 		slider.value -= life;
 		Debug.Log(life +" life");
 		lifespeed = 0.01f;
+		textData = GetComponent<TextData> ();
+		//text data function
+		//textdataFunction = GameObject.Find("TextData") as GameObject;
 		//main states panel
 		MessegePanel    = GameObject.Find ("MessegePanel")     as GameObject;
 		FoundPanel      = GameObject.Find ("FoundPanel"  )     as GameObject;
@@ -137,7 +145,7 @@ public class PlayerUI : MonoBehaviour {
 		}
 
 	// if finish made crops
-	public void F_jadgeFinshorYet(){
+	 void F_jadgeFinshorYet(){
 		if (Savetest.Famer_requestday > Savetest.day) {
 			Famer_DidcultivationPanel.SetActive(true);
 			TextData.F_showresult = true; 
@@ -186,12 +194,12 @@ public class PlayerUI : MonoBehaviour {
 			}		
 		}
 		if (Input.GetMouseButton (0)) {
-			if(other.gameObject.tag == "Famer" ){
-				F_jadgeFinshorYet();
+			if(other.gameObject.tag == "Famer" && !(Savetest.day == Savetest.Famer_requestday)){
 				FoundPanel.SetActive(false);
 				TalkPanel.SetActive (true);
 				FamerText.SetActive(true);
 				Stop = true;
+				textData.Famer_TextUpDate();
 			}		
 		}
 

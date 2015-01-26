@@ -37,9 +37,18 @@ public class FamerButton : MonoBehaviour {
 		choosed();
 	}
 	//
-	public void choosing_tikara  (){ choose_tikara     = true;}
-	public void choosing_tisei   (){ choose_tisei      = true;}
-	public void choosing_oretrice(){ choose_oretrice   = true;}
+	public void choosing_tikara  (){
+		choose_tikara     = true;
+		Savetest.Famer_requestday = Savetest.day;
+	}
+	public void choosing_tisei   (){ 
+		choose_tisei      = true;
+		Savetest.Famer_requestday = Savetest.day;
+	}
+	public void choosing_oretrice(){
+		choose_oretrice   = true;
+		Savetest.Famer_requestday = Savetest.day;
+	}
 
 //	//make crops
 //	public void pleasecultivationButton(){
