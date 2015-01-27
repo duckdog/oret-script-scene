@@ -39,6 +39,7 @@ public class PlayerUI : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+
 		slider.value -= life;
 		Debug.Log(life +" life");
 		lifespeed = 0.01f;

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerControl : MonoBehaviour {
 
-	public static float MOVE_SPEED = 20.0f;//移動速度.
+	public static float MOVE_SPEED = 10.0f;//移動速度.
 	public static int Vector = 0;
 	private struct Key{
 		public bool up;
