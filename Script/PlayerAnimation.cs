@@ -46,7 +46,8 @@ public class PlayerAnimation : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		this.get_input ();
-		if (this.key.up ||this.key.down||this.key.left||this.key.right) {
+		if (this.key.up ||this.key.down||this.key.left||this.key.right ||
+		    Title.continueplay || Title.firstplay) {
 			animator.SetBool (doWalkId, true);
 		} else {
 			animator.SetBool(doWalkId,false);		
